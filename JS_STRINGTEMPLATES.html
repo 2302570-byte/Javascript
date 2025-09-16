@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS String Templates</title>
+</head>
+<body>
+    <p id= "demo"></p>
+    <p id= "demo1"></p>
+    <p id= "demo2"></p>
+    <p id= "demo3"></p>
+
+    <script> 
+        let text = `Bien's "John"`;
+        document.getElementById('demo').innerHTML = text;
+
+        let fName = "Bien";
+        let lName = 'Dimaculangan';
+
+        let full =  `Hello, ${fName} ${lName}!`;
+        document.getElementById('demo1').innerHTML = full;
+
+        let price = 5;
+        let VAT = 0.75;
+
+        let total = `Total: ${(price * (1 + VAT)).toFixed(1)}`;
+        document.getElementById('demo2').innerHTML = total;
+
+        let header = "Template Strings";
+        let tags = ["template string", "javascript", "es6"];
+
+        let html = `<h2>${header}</h2><ul>`;
+
+        for (const x of tags) {
+            html += `<li>${x}</li>`;
+        }
+
+        html += `</ul>`;
+        document.getElementById("demo3").innerHTML = html;
+    </script>
+</body>
+</html>
